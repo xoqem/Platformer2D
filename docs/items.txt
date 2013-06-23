@@ -10,6 +10,11 @@ Wearable:
 - Jump suit
 - Space suit (various strengths, etc).
 
+Machines:
+- Oxygen reuse
+- Water reuse
+- Teleporter
+
 Vehicles:
 - Hover craft
 - small fighter ship

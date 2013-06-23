@@ -6,6 +6,7 @@ Scientist: Researches new plans, ideas for how they may research:
   - Requires: short range radio, oxygen reuse machine, water reuse machine, bed
   - Workspace: lab
   - You bring them materials (they can store up a decent quantity of whatever you bring over time), and slowly use up blocks of the material as they discover new things that can be made.
+  - Should discoveries last through other games, or should you have to rediscover them every game?
 
 Doctor: Treats injuries, Heals sickness (maybe allow child birth, though maybe too complicated for the first game)
   - Pre-req: Scientist

@@ -1,5 +1,13 @@
 Earth is in the middle of a large disaster or war.  You, and a few other pods are launched toward the moon secretly in hopes of continuing the race should Earth become uninhabitable.  Your pod lands first, you see no signs of the other pods (yet), and you have a limited supply of water (enough for a couple of months?), food (a couple of weeks?), and air (a couple of hours or days?).  You must build a basic shelter to live in using some basic materials and tools sent along with you in your pod.  You also have a couple of designs/plans for building a couple of vital appliances to make your stay sustainable.
 
+Exploring will be limited by the oxygen supply (should have some sort of emergency backup supply, or maybe quick way to get back to the base).  Maybe digging down should be easier than exploring out at first to encourage it.  Materials toward the top of the surface are mostly lunar soil, some basic crafting material to build a few basic machines.  No sign of other life.  Deeper, discover some unexpected signs of humans having visited before but not making it (maybe small underground deserted modern base).  At this point maybe find some usable equipment.
+
+Some underground water sources will be found, maybe pump it back to the surface, or hand carry it at first to replenish water tank until water reuse machine is built.
+
+Find mushrooms or some sort of edible underground plant that can be cultivated?  Or do we require that only food brought from earth be cultivated for large portions of the early game, and maybe other food sources found later on (or is this even necessary)?
+
+Walls will conduct electricity and water for convenience?  Or should the user have to build out plumbing and wiring.  Maybe only advanced walls have plumbing and electric built in.
+
 Once you get a basic setup, you get a radio message from the scientist that he will land his pod as soon as you have sleeping quarters for him.  Once you have done that, he will join you and give you basic plans for a small lab.
 
 Once you discover long range radio, you get a message from a doctor who needs sleeping quarters, who will bring plans for a basic medical bay.  Similar process for other party members.
