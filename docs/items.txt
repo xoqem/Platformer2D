@@ -1,0 +1,15 @@
+Weapons:
+- Phaser / Gun
+- Light saber / Sword
+- Laser weapon
+
+Tools:
+- Flashlight (battery powered)
+
+Wearable:
+- Jump suit
+- Space suit (various strengths, etc).
+
+Vehicles:
+- Hover craft
+- small fighter ship

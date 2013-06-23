@@ -1,0 +1,18 @@
+Small lab
+Large lab
+Small workshop
+Large workshop
+Hangar
+Space dock
+Landing pad
+Small med bay
+Large med bay
+Kitchen
+Cafeteria
+Small store
+Large store
+Specialty stores
+Community center
+Class room
+Gymnasium
+Worship / Meditation room

@@ -1,0 +1,31 @@
+First question: do people have only one speciality, or can they do everything, just not excel at other things?
+
+Genders: genders should be random per speciality, should a mix of genders be ensured for birthing?
+
+Scientist: Researches new plans, ideas for how they may research:
+  - Requires: short range radio, oxygen reuse machine, water reuse machine, bed
+  - Workspace: lab
+  - You bring them materials (they can store up a decent quantity of whatever you bring over time), and slowly use up blocks of the material as they discover new things that can be made.
+
+Doctor: Treats injuries, Heals sickness (maybe allow child birth, though maybe too complicated for the first game)
+  - Pre-req: Scientist
+  - Requires: long range radio, bed
+
+Nurse - Large medical bay only, heals more diseases, more capacity
+  - Pre-req: X number of people
+  - Requires: bed
+
+Mechanic - Required to build complex machines, takes time to build more complicated items
+
+Security - Helps protect base in dark siders attack
+
+Teacher:
+  - Pre-req: X number of children
+  - Requires: bed
+
+Professor:
+  - Pre-req: 2 teachers
+
+Prophet / Alien Diety:
+  - Pre-req: Worship center
+  - Does the prophet just visit or join?
