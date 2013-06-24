@@ -18,7 +18,7 @@ public class Main {
   long lastFPS;
 
   Map map = new Map(100, 50);
-  PhysicsEntity player = new PhysicsEntity(map, 0, map.height / 2 + 1);
+  PhysicsEntity player = new PhysicsEntity(map, 0, map.height / 2 + 2);
 
   int screenWidth = 800;
   int screenHeight = 600;
@@ -33,6 +33,7 @@ public class Main {
     }
 
     player.color = new Color(255, 255, 127, 255);
+    player.size.set(2f, 3f);
 
     initGL(); // init OpenGL
     getDelta(); // call once before loop to initialise lastFrame

@@ -5,6 +5,7 @@ import org.lwjgl.util.vector.Vector2f;
 public class Entity {
 
   public Vector2f position;
+  public Vector2f size = new Vector2f(1, 1);
   public boolean visible = true;
   public Color color = new Color(0, 0, 0, 0);
 
@@ -25,11 +26,14 @@ public class Entity {
 
     GL11.glColor4f(color.getRed() / 255f, color.getGreen() / 255f, color.getBlue() / 255f, color.getAlpha() / 255f);
 
+    float halfWidth = size.x / 2f;
+    float halfHeight = size.y / 2f;
+
     GL11.glBegin(GL11.GL_QUADS);
-    GL11.glVertex2f((x - 0.5f) * Globals.scale, (y - 0.5f) * Globals.scale);
-    GL11.glVertex2f((x + 0.5f) * Globals.scale, (y - 0.5f) * Globals.scale);
-    GL11.glVertex2f((x + 0.5f) * Globals.scale, (y + 0.5f) * Globals.scale);
-    GL11.glVertex2f((x - 0.5f) * Globals.scale, (y + 0.5f) * Globals.scale);
+    GL11.glVertex2f((x - halfWidth) * Globals.scale, (y - halfHeight) * Globals.scale);
+    GL11.glVertex2f((x + halfWidth) * Globals.scale - 2, (y - halfHeight) * Globals.scale);
+    GL11.glVertex2f((x + halfWidth) * Globals.scale - 2, (y + halfHeight) * Globals.scale - 2);
+    GL11.glVertex2f((x - halfWidth) * Globals.scale, (y + halfHeight) * Globals.scale - 2);
     GL11.glEnd();
   }
 }
