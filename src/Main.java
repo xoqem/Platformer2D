@@ -18,7 +18,7 @@ public class Main {
   long lastFPS;
 
   Map map = new Map(100, 50);
-  Entity player = new Entity(0, 0);
+  PhysicsEntity player = new PhysicsEntity(map, 0, map.height / 2 + 1);
 
   int screenWidth = 800;
   int screenHeight = 600;
@@ -52,17 +52,16 @@ public class Main {
   }
 
   public void update(int delta) {
-    if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)) player.position.x -= 0.02f * delta;
-    if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) player.position.x += 0.02f * delta;
 
-    if (Keyboard.isKeyDown(Keyboard.KEY_UP)) player.position.y += 0.02f * delta;
-    if (Keyboard.isKeyDown(Keyboard.KEY_DOWN)) player.position.y -= 0.02f * delta;
+    player.velocity.set(0f, 0f);
 
-    while (player.position.x < 0) player.position.x += map.width;
-    while (player.position.x >= map.width) player.position.x -= map.width;
+    if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)) player.velocity.setX(-0.02f);
+    if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) player.velocity.setX(0.02f);
 
-    if (player.position.y < 0) player.position.y = 0;
-    if (player.position.y >= map.height) player.position.y = map.height;
+    if (Keyboard.isKeyDown(Keyboard.KEY_UP)) player.velocity.setY(0.02f);
+    if (Keyboard.isKeyDown(Keyboard.KEY_DOWN)) player.velocity.setY(-0.02f);
+
+    player.update(delta);
 
     updateFPS(); // update FPS Counter
   }
@@ -112,15 +111,13 @@ public class Main {
   public void renderGL() {
     // Clear The Screen And The Depth Buffer
     GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
+    GL11.glClearColor(0.55f, 0.9f, 1.0f, 1.0f);
 
-    // draw quad
     GL11.glPushMatrix();
     GL11.glTranslatef(
         -player.position.getX() * Globals.scale + screenWidth / 2,
         -player.position.getY() * Globals.scale + screenHeight / 2,
         0);
-    //GL11.glRotatef(rotation, 0f, 0f, 1f);
-    //GL11.glTranslatef(-x, -y, 0);
 
     Vector2f viewportSize = new Vector2f(screenWidth / Globals.scale, screenHeight / Globals.scale);
     map.render(player.position, viewportSize);

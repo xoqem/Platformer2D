@@ -34,14 +34,20 @@ public class Map {
       for (int y = 0; y < height; y ++) {
         Cell cell = new Cell(x, y);
 
-        if (y == halfHeight) {
-          cell.color = new Color(0, 158, 11, 255);
-        } else if (y > halfHeight) {
-          cell.color = new Color(140, 228, 255, 255);
-        } else if (Math.random() < 0.5) {
-          cell.color = new Color(214, 175, 107, 255);
+        if (y > halfHeight) {
+          cell.visible = false;
+          cell.passable = true;
         } else {
-          cell.color = new Color(160, 160, 160, 255);
+          cell.visible = true;
+          cell.passable = false;
+
+          if (y == halfHeight) {
+            cell.color = new Color(0, 158, 11, 255);
+          } else if (Math.random() < 0.5) {
+            cell.color = new Color(214, 175, 107, 255);
+          } else {
+            cell.color = new Color(160, 160, 160, 255);
+          }
         }
 
         cells[x][y] = cell;
