@@ -1,6 +1,9 @@
 import org.lwjgl.util.Color;
 import org.lwjgl.util.vector.Vector2f;
 
+import java.util.Iterator;
+import java.util.List;
+
 public class Map {
 
   public float width;
@@ -15,15 +18,21 @@ public class Map {
     generate();
   }
 
+  public Cell getCell(Vector2f coords) {
+    return getCell(coords.x, coords.y);
+  }
+
   public Cell getCell(float x, float y) {
+    if (!areCoordsValid(x, y)) return null;
 
     while (x >= width) x -= width;
     while (x < 0) x+= width;
 
-    if (y < 0) return null;
-    if (y >= height) return null;
-
     return cells[(int)x][(int)y];
+  }
+
+  public boolean areCoordsValid(float x, float y) {
+    return (y >= 0 && y < height);
   }
 
   public void generate() {
@@ -56,21 +65,11 @@ public class Map {
   }
 
   public void render(Vector2f position, Vector2f viewportSize) {
-
-    float halfWidth = viewportSize.getX() / 2;
-    float halfHeight = viewportSize.getY() / 2;
-    float startX = (float)Math.floor(position.getX() - halfWidth);
-    float startY = (float)Math.floor(position.getY() - halfHeight);
-    float endX = (float)(Math.ceil(position.getX() + Math.ceil(halfWidth)));
-    float endY = (float)(Math.ceil(position.getY() + Math.ceil(halfHeight)));
-
-    for (float x = startX; x < endX; x++) {
-      for (float y = startY; y < endY; y ++) {
-        Cell cell = getCell(x, y);
-        if (cell == null) continue;
-
-        cell.render(x, y);
-      }
+    List<Vector2f> cellCoords = MapUtil.getContainedCellCoords(this, position, viewportSize);
+    Iterator<Vector2f> itr = cellCoords.iterator();
+    while(itr.hasNext()){
+      Vector2f coords = itr.next();
+      getCell(coords).render(coords);
     }
   }
 }
